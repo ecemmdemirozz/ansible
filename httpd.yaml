@@ -1,0 +1,16 @@
+---
+  - name: Playbook- httpd.yml
+    hosts: localhost
+    tasks:
+      - name: Install apache on centos8
+        yum:
+          name: htppd
+          state: latest
+      - name: Start Apache
+        systemd: 
+          name: httpd
+          state: started
+      - name: Enable Apache
+        systemd:
+          name: httpd
+          enabled: yes
