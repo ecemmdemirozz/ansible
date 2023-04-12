@@ -1,0 +1,19 @@
+---
+  - name: add users on user.yaml
+    hosts: localhost
+    tasks: 
+      - name: user add bob
+        user: 
+          name: bob
+          uid: 4400
+      - name: user add anna
+        user:
+          name: anna
+          uid: 4500
+      - name: user add amy
+        user:
+          name: amy
+          uid: 4600
+  
+        
+    
